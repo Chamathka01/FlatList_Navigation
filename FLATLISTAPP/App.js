@@ -3,15 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import StudentList from './components/StudentList';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {Profile} from './components/Profile';
 
 export default function App() {
-  const Stack = createStackNavigator();
+  const Stack = createNativeStackNavigator();
   return (
     <SafeAreaProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-          <Stack.Screen name="Profile" component={ProfileScreen} />
+          <Stack.Screen name="StudentList" component={StudentList} />
+          <Stack.Screen name="Profile" component={Profile} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

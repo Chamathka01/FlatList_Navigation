@@ -1,4 +1,4 @@
-import{ FlatList, StyleSheet, View } from "react-native";
+import{ FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-paper";
 import { students } from "./StudentDb";
 export default function StudentList(){
@@ -7,7 +7,12 @@ export default function StudentList(){
       <FlatList
         data={students}
         keyExtractor={item=>item.id}
-        renderItem={({item}) => <Text style={styles.card}>{item.name}</Text>}
+        renderItem={({item}) => 
+            <TouchableOpacity>
+                 <Text style={styles.card}>{item.name}</Text>
+            </TouchableOpacity>
+       
+    }
       />
     </View>
   );
