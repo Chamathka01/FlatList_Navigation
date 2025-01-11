@@ -1,4 +1,5 @@
 import{ FlatList, StyleSheet, View } from "react-native";
+import { Text } from "react-native-paper";
 export default function StudentList(){
     return(
         <View style={styles.container}>
