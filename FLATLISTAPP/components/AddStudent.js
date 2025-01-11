@@ -1,8 +1,7 @@
 import { Image } from "react-native";
 import { View } from "react-native";
 import { Text } from "react-native-paper";
-export default function Profile({route}){
-    const {student} =route.params;
+export default function AddStudent(){
     return(
         <View>
            <Text>Name:{student.name}</Text> 
