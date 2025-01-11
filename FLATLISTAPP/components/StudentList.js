@@ -7,7 +7,7 @@ export default function StudentList(){
       <FlatList
         data={students}
         keyExtractor={item=>item.id}
-        renderItem={({item}) => <Text style={styles.item}>{item.name}</Text>}
+        renderItem={({item}) => <Text style={styles.card}>{item.name}</Text>}
       />
     </View>
   );
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       paddingTop: 22,
+      backgroundColor: '#fff',
     },
     item: {
       padding: 10,
