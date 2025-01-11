@@ -10,7 +10,7 @@ export default function StudentList(){
                 data={students}
                 keyExtractor={item => item.id}
                 renderItem={({ item }) =>
-                    <TouchableOpacity onPress={()=>navigation.navigation("Profile")}>
+                    <TouchableOpacity onPress={()=>navigation.navigation("Profile",{student:item})}>
                         <Text style={styles.card}>{item.name}</Text>
                     </TouchableOpacity>
 
