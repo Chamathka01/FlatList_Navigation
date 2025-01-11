@@ -1,4 +1,4 @@
-
+import{ FlatList, StyleSheet, View } from "react-native";
 export default function StudentList(){
     return(
         <View style={styles.container}>
