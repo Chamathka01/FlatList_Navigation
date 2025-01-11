@@ -6,7 +6,8 @@ export default function StudentList(){
         <View style={styles.container}>
       <FlatList
         data={students}
-        renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+        keyExtractor={item=>item.id}
+        renderItem={({item}) => <Text style={styles.item}>{item.name}</Text>}
       />
     </View>
   );
@@ -21,5 +22,17 @@ const styles = StyleSheet.create({
       padding: 10,
       fontSize: 18,
       height: 44,
+    },
+    card: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        padding: 16,
+        marginBottom: 12,
+        backgroundColor: '#ffffff',
+        borderRadius:8,
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowRadius:4,
+        elevation:2,
     },
   });
