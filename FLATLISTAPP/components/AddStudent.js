@@ -4,6 +4,7 @@ import { View } from "react-native";
 import { Button, Text, TextInput } from "react-native-paper";
 export default function AddStudent(){
     const [name,setName]=useState();
+    const navigation = useNavigation();
     const newStudent={
         name:name,
         id:"451a",

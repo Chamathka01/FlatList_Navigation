@@ -2,18 +2,17 @@ import{ FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text, button } from "react-native-paper";
 import { students } from "./StudentDb";
 import { useNavigation } from "@react-navigation/native";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export default function StudentList(){
     const navigation =useNavigation();
     const [mystudents,setStudents]=useState(students);
     React.useEffect(() => {
-        if (route.params?.post) {
-          // Post updated, do something with `route.params.post`
-          // For example, send the post to the server
-          alert('New post: ' + route.params?.post);
+        if (route.params?.newStudent) {
+           const {student} = route.params;
+           setStudents((prev)=>[...prev,{...newStudent}]);
         }
-      }, [route.params?.post]);
+      }, [route.params?.newStudent]);
     return(
         <View style={styles.container}>
             <FlatList
