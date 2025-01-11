@@ -7,6 +7,13 @@ import { useState } from "react";
 export default function StudentList(){
     const navigation =useNavigation();
     const [mystudents,setStudents]=useState(students);
+    React.useEffect(() => {
+        if (route.params?.post) {
+          // Post updated, do something with `route.params.post`
+          // For example, send the post to the server
+          alert('New post: ' + route.params?.post);
+        }
+      }, [route.params?.post]);
     return(
         <View style={styles.container}>
             <FlatList
