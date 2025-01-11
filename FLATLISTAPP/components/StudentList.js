@@ -2,8 +2,11 @@ import{ FlatList, StyleSheet, TouchableOpacity, View } from "react-native";
 import { Text } from "react-native-paper";
 import { students } from "./StudentDb";
 import { useNavigation } from "@react-navigation/native";
+import { useState } from "react";
+
 export default function StudentList(){
     const navigation =useNavigation();
+    const [students,setStudents]=useState(students);
     return(
         <View style={styles.container}>
             <FlatList
