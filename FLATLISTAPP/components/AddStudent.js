@@ -7,7 +7,10 @@ export default function AddStudent(){
     return(
         <View>
            <TextInput mode="outlined" label="Name" value={name} onChangeText={setName}/>
-            <Button>ADD</Button>
+            <Button onPress={()=>{
+                //Pas params back to home screen
+                navigation.popTo('StudentList',{post:postText});
+            }}>ADD</Button>
         </View>
     );
 }
