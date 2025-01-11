@@ -7,6 +7,7 @@ import React, { useState } from "react";
 export default function StudentList(){
     const navigation =useNavigation();
     const [mystudents,setStudents]=useState(students);
+    const [rerendeR,setRerender]=useState();
     React.useEffect(() => {
         if (route.params?.newStudent) {
            const {student} = route.params;
@@ -18,6 +19,7 @@ export default function StudentList(){
             <FlatList
                 data={students}
                 keyExtractor={item => item.id}
+                extraData={}
                 renderItem={({ item }) =>
                     <TouchableOpacity onPress={()=>navigation.navigation("Profile",{student:item})}>
                         <Text style={styles.card}>{item.name}</Text>
