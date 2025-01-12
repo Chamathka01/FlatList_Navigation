@@ -20,7 +20,7 @@ export default function StudentList(){
             <FlatList
                 data={students}
                 keyExtractor={item => item.id}
-                extraData={[rerender}
+                extraData={[rerender]}
                 renderItem={({ item }) =>
                     <TouchableOpacity onPress={()=>navigation.navigation("Profile",{student:item})}>
                         <Text style={styles.card}>{item.name}</Text>
