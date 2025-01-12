@@ -12,8 +12,8 @@ export default function UpdateStudent({route}){
     const [address, setAddress] = useState(student.address);
 
     return(
-        <View>
-            <Text>Update Student</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Update Student</Text>
             <Text>Name:</Text>
             <TextInput
                 style={styles.input}
@@ -53,3 +53,24 @@ export default function UpdateStudent({route}){
             </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#f9f9f9',
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginBottom: 20,
+    },
+    input: {
+        height: 50,
+        borderColor: '#ccc',
+        borderWidth: 1,
+        marginBottom: 12,
+        paddingHorizontal: 10,
+        borderRadius: 4,
+    },
+});
