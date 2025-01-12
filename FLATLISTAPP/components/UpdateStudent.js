@@ -1,7 +1,16 @@
+import { useNavigation, useRoute } from '@react-navigation/native';
+import { useState, useEffect } from 'react';
 import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 export default function UpdateStudent({route}){
     const navigation = useNavigation();
-    const { student } = route.params
+    const { students } = route.params
+
+    const [name, setName] = useState(student.name);
+    const [age, setAge] = useState(String(student.age));
+    const [phone, setPhone] = useState(student.phone);
+    const [email, setEmail] = useState(student.email);
+    const [address, setAddress] = useState(student.address);
+
     return(
         <View>
             <Text>Update Student</Text>
