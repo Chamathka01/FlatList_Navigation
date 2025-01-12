@@ -1,5 +1,7 @@
-import { View, Text } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Text } from 'react-native';
 export default function UpdateStudent({route}){
+    const navigation = useNavigation();
+    const { student } = route.params
     return(
         <View>
             <Text>Update Student</Text>
@@ -38,8 +40,7 @@ export default function UpdateStudent({route}){
                 value={address}
                 onChangeText={setAddress}
             />
-        </View>
-
-
+            <Button title="Update" onPress={handleUpdate} />
+            </View>
     );
 }
